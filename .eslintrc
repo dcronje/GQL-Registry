@@ -1,0 +1,159 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "extends": [
+    "standard",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "globals": {
+    "Choose": "readonly",
+    "When": "readonly",
+    "Otherwise": "readonly",
+    "If": "readonly",
+    "FB": "readonly",
+    "Image": "readonly",
+    "File": "readonly",
+    "Blob": "readonly",
+    "JSX": "readonly"
+  },
+  "env": {
+    "browser": false
+  },
+  "plugins": [
+    "react",
+    "@typescript-eslint",
+    "import"
+  ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "rules": {
+    "react/display-name": "off",
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "parent",
+          "sibling",
+          "index",
+          "internal"
+        ],
+        "pathGroups": [
+          {
+            "pattern": "react",
+            "group": "external",
+            "position": "before"
+          },
+          {
+            "pattern": "@apollo/**",
+            "group": "external",
+            "position": "before"
+          },
+          {
+            "pattern": "@loadable/**",
+            "group": "external",
+            "position": "before"
+          },
+          {
+            "pattern": "@storybook/**",
+            "group": "external",
+            "position": "before"
+          },
+          {
+            "pattern": "@**/**",
+            "group": "parent",
+            "position": "before"
+          },
+        ],
+        "pathGroupsExcludedImportTypes": [
+          "react"
+        ],
+        "newlines-between": "always",
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ],
+    "camelcase": [
+      "error",
+      {
+        "properties": "never"
+      }
+    ],
+    "react/prop-types": 0,
+    "prefer-const": [
+      "error",
+      {
+        "destructuring": "all"
+      }
+    ],
+    "@typescript-eslint/no-empty-interface": 1,
+    "@typescript-eslint/no-explicit-any": 1,
+    "@typescript-eslint/member-delimiter-style": [
+      1,
+      {
+        "multiline": {
+          "delimiter": "none",
+          "requireLast": true
+        },
+        "singleline": {
+          "delimiter": "comma",
+          "requireLast": false
+        }
+      }
+    ],
+    "semi": [
+      2,
+      "never"
+    ],
+    "comma-dangle": [
+      2,
+      "always-multiline"
+    ],
+    "space-infix-ops": 0,
+    "max-len": [
+      2,
+      1000,
+      2
+    ],
+    "indent": [
+      "error",
+      2,
+      {
+        "MemberExpression": "off",
+        "SwitchCase": 1
+      }
+    ],
+    "space-before-function-paren": [
+      "error",
+      {
+        "anonymous": "always",
+        "named": "never",
+        "asyncArrow": "always"
+      }
+    ],
+    "react/jsx-uses-react": 1,
+    "react/jsx-uses-vars": "error",
+    "react/jsx-no-undef": "off",
+    "no-undef": "off",
+    "@typescript-eslint/no-use-before-define": "off",
+    "no-use-before-define": "off",
+    "react/jsx-props-no-multi-spaces": "error",
+    "padded-blocks": [
+      2,
+      {
+        "classes": "always"
+      }
+    ]
+  }
+}

@@ -1,6 +1,6 @@
 {
   "name": "gql-registry",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "GQL Registry",
   "main": "build/index.js",
   "scripts": {
@@ -13,6 +13,10 @@
     "GraphQL",
     "Server"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dcronje/GQL-Registry"
+  },
   "author": "Drew Cronje",
   "license": "ISC",
   "files": [
